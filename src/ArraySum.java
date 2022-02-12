@@ -1,33 +1,32 @@
 import java.util.Scanner;
 
 public class ArraySum {
-    public static int[] takeIntput(){
-      Scanner s = new Scanner(System.in);
-      int n = s.nextInt();
-      int[] arr = new int[n];
-      for( int i = 0; i< n;i++) {
-          arr[i] = s.nextInt();
-      }
+    public static int[] takeInput() {
 
-      return arr;
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
 
+        }
+        return arr;
     }
 
+    public static int Arraysum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
 
 
-
-    public static int sum(int[] arr){
-        int ans =0;
-        for (int  i = 0; i<arr.length; i++){
-            ans = ans + arr[i];
         }
-        return ans;
+        return sum;
+
     }
 
     public static void main(String[] args) {
-         int[]arr = takeIntput();
-         int c = sum(arr);
-        System.out.println(c);
-
+        int[] arr = takeInput();
+        System.out.println(Arraysum(arr));
     }
 }
+
